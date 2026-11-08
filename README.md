@@ -23,6 +23,8 @@ The full guide is inside the editor: **Help > Guide** (F1).
 
 **This repository contains no part of the game.** You need your own ROM.
 
+Showcases of the Editor: https://drive.google.com/drive/folders/1YlPCkMSg9c-Q4TmLic8ikl5K3vcnF3XR?usp=sharing
+
 ## Before anything else, how This Editor was made
 
 I want to make this clear from the beginning instead of having people find out about it later. This Editor was genuinely vibe-coded with human-effort. AI was used to help write and develop the program, and I'm not going to hide that or pretend the entire codebase was handwritten by me. But at the same time, This Editor wasn't something I just thought of one afternoon and asked an AI to finish in a single prompt. I've spent the past few days playtesting every modification of the main game to see if it lines up, done by a REAL HUMAN, and fully understand the concept on how the game is breakdown. I just want people to know where the project came from and how much I wanted to see it become a real program, and possibly establish a major step in the Super Monkey Ball Community.
