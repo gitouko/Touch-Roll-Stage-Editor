@@ -1,0 +1,41 @@
+<h1>Objects</h1>
+<p>There are four kinds of object: the <b>start</b>, <b>goals</b>, <b>bumpers</b> and <b>bananas</b>
+(single bananas and bunches worth five).</p>
+<h2>Adding</h2>
+<p>Press <b>1</b> for a banana, <b>2</b> for a bunch, <b>3</b> for a bumper or <b>4</b> for a goal (or use the
+toolbar or the Object menu), then click on the top view where it should go. It lands on the floor under the
+pointer. Press <b>Esc</b> to change your mind. A new goal turns its front towards the start so you can roll
+straight into it.</p>
+<h2>Moving</h2>
+<p>Drag an object on the top view to move it across the stage, or on the side view to change its height. The
+arrow keys nudge the selected object by one snap step, and <b>Page Up</b> and <b>Page Down</b> raise and
+lower it. You can also type exact numbers into X, Y and Z on the right.</p>
+<h2>Turning</h2>
+<p><b>Swivel (facing)</b> turns the start or a goal around the vertical axis. 0° points up on the top view
+and larger numbers turn left. <b>Q</b> and <b>E</b> turn the selected object 15° at a time; hold Shift for
+1°. A goal's facing is the direction of its front, the side you roll through.</p>
+<p>Goals and bumpers can also <b>Tilt</b> (lean forwards or backwards) and <b>Rotate</b> (roll to one side),
+because the game stores a full rotation for them. Bumpers swivel too. Together the three fields turn a goal
+or bumper any way you like, so a goal can stand on a slope or lean into a curve. The start has only a facing
+in the game's data, and bananas have no rotation at all because they spin by themselves.</p>
+<h2>Sizes</h2>
+<p>Goals and bumpers show a <b>Size</b> along their own X, Y and Z (width, height and depth, where 1 is the
+normal size), but you can't change it. The game would draw a bigger or smaller goal or bumper, yet it ignores
+the size where it matters. A bumper bounces at its normal size however big it's drawn. A bigger goal's finish
+line gets smaller instead of bigger and moves up, so a goal made taller than about 1.2 can't be finished at
+all: its finish line ends up above the ball. So the editor keeps
+every goal and bumper at the size stored in the game, and a copy made with Ctrl+D is always normal-sized. The
+start and bananas have no size, because the game stores only their position (and the start's facing).</p>
+<h2>Other settings</h2>
+<p>A goal can be made a <b>red goal</b>, and a banana can be turned into a <b>bunch</b> (worth 5) or back.
+The banana total at the bottom of the window counts the stage's bananas; the game can't count past 255.</p>
+<h2>Duplicate, delete and reset</h2>
+<p><b>Ctrl+D</b> copies the selected object next to the original, <b>Del</b> deletes it, and <b>Edit &gt; Reset
+selected object to original</b> puts an original object back exactly as it was. The start can be moved and
+turned but not deleted.</p>
+<h2>Objects on moving parts</h2>
+<p>Some objects belong to a part of the stage that moves, like a sliding platform. They're drawn with a
+dashed outline, shown where they are when the stage starts, and they ride along with their part in the
+game. New objects always go into the stage's fixed part.</p>
+<p>An object has to sit inside the stage's collision area for the ball to touch it. If you put one too far
+out, the editor tells you instead of saving something that wouldn't work.</p>

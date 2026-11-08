@@ -1,0 +1,29 @@
+# Builds "Touch & Roll Stage Editor.exe" on Windows and checks it with --self-test.
+# Run it from the Actions tab (Run workflow); the program is attached to the run as an artifact.
+name: Windows build
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the build tools
+        run: python -m pip install "pyinstaller==6.22.3" "PySide6==6.12.0" "PyOpenGL==3.1.10" "numpy==1.26.4"
+      - name: Build
+        run: python -m PyInstaller --noconfirm --clean packaging/tredit.spec
+      - name: Self-test
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath "dist\Touch & Roll Stage Editor.exe" -ArgumentList "--self-test" -Wait -PassThru
+          Get-Content "$env:APPDATA\TouchRollResearch\Touch & Roll Stage Editor\self_test.txt" -ErrorAction SilentlyContinue
+          if ($p.ExitCode -ne 0) { exit 1 }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Touch-Roll-Stage-Editor-windows
+          path: dist/Touch & Roll Stage Editor.exe

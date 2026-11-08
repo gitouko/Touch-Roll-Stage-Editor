@@ -1,0 +1,43 @@
+<h1>Importing 3D models</h1>
+<p>This is the recommended way to make custom geometry. Build the shape in a 3D program such as Blender or
+Wings3D, export it as an .obj file, and bring it into a new stage with
+<b>Geometry &gt; Import OBJ model…</b>. The editor turns it into something the game draws and the ball can
+roll on, corner for corner.</p>
+<p>Models can be imported into new stages, the ones made with <i>Stage &gt; Create new stage here</i>.</p>
+<h2>Exporting from your 3D program</h2>
+<p>In Blender, use <i>File &gt; Export &gt; Wavefront (.obj)</i> and keep "Y up" (the default). In Wings3D,
+use <i>File &gt; Export &gt; Wavefront (.obj)</i>. Other programs work the same way; if a model comes in lying
+on its side, pick <i>Z is up</i> in the import window. One unit in your 3D program is one unit in the stage,
+and the ball is about one unit across, which helps when you're judging sizes.</p>
+<p>The editor reads everything a 3D program normally writes: objects and groups, materials (and the .mtl
+file next to the .obj), texture coordinates, normals, faces with any number of corners, even concave ones,
+and vertex colours. Normals and colours are skipped, because the game lights the stage itself, and so are
+lines and points, which have no surface.</p>
+<p>Each face is drawn and solid from its front, the side where its corners go round counter-clockwise. 3D
+programs do this for you, but if part of your model is missing in the game or the ball falls through it,
+flip that part's faces in your 3D program, or tick <b>Both sides</b> when you import.</p>
+<h2>The import window</h2>
+<p>On the left you set how the whole file comes in. <b>Scale</b> has a box for X, Y and Z; with <b>Keep
+proportions</b> ticked they change together, and unticked you can stretch the model along one axis.
+<b>Position</b> is where the bottom middle of the whole file goes, and <b>Tilt / Swivel / Rotate</b> turns it.
+Choose whether it's <b>Drawn</b>, <b>Solid</b> or both: a model that's drawn but not solid makes a nice
+decoration, and one that's solid but not drawn works as an invisible floor in any shape you like.</p>
+<p>On the right, <b>Objects in the file</b> lists every object (or group) in the .obj with its size. Each one
+becomes its own piece in the stage, laid out just as it was in your 3D program. Untick any you don't want.</p>
+<h2>Every object on its own</h2>
+<p>After importing, each object shows up as its own model. Click one to select it, then move it, turn it,
+scale it along X, Y and Z, make it a decoration or an invisible floor, or delete it, without touching the
+others. A piece turns and scales about its own bottom middle. So you can build a whole course in one file
+and still fine-tune each part in the editor.</p>
+<h2>Materials and textures</h2>
+<p>For now the game's own textures stand in for yours. Under <b>Textures</b> the import window lists the
+materials of your file, and next to each one you pick which of the stage's textures it's drawn with. Each
+model piece shows the same list on the right, so you can change your mind later. Tick <b>Use the file's
+texture coordinates</b> to lay each texture on the way your UV map does; untick it to lay textures on from
+above, like on platforms.</p>
+<p>Bringing in your own pictures as textures is planned for version 1.1. Until then, pick the stage
+texture that comes closest to what you had in mind; the UV map you made still decides where it sits.</p>
+<h2>Keep it light</h2>
+<p>The DS is a small machine. The most detailed stage in the game draws about 3,300 triangles, and the
+import window warns you if your stage would go past that. A single import can have up to 3,000 triangles.
+Simple, chunky shapes look right at home in this game, so there's rarely a need for more.</p>

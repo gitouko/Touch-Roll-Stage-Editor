@@ -1,0 +1,41 @@
+<h1>Moving parts and keyframes</h1>
+<p>Many stages have parts that move: platforms that slide, bridges that swing, floors that ripple. The
+keyframe editor lets you change how they move. Open it with <b>Stage &gt; Animation keyframes</b>
+(Ctrl+K) or the <b>Keyframes…</b> button in the 3D view. It opens below the views and switches to the 3D view
+so you can watch the result.</p>
+<h2>Parts and channels</h2>
+<p>The list on the left shows each moving part with six channels: <b>Move X</b>, <b>Move Y</b> and
+<b>Move Z</b> (sideways, up and down, forwards and back) and <b>Turn X</b>, <b>Turn Y</b> and <b>Turn Z</b>
+(tilting, turning and rolling). The second column says whether a channel already moves in the original
+stage, stays fixed, or has your keys. Hover over a part to see whether its collision moves with it and how
+many objects ride on it.</p>
+<h2>The curve</h2>
+<p>The middle of the panel draws the selected channel over time. The grey dashed line is the original
+motion, the blue line is the motion that will be saved, and the diamonds are your keys. The red line is the
+current frame: click or drag anywhere on the curve to move it, and the 3D view follows. The game runs at 60
+frames a second, so frame 60 is one second in.</p>
+<h2>Editing with keys</h2>
+<p>Pick a channel and press <b>Edit with keys</b>. The editor turns the channel's current motion into a
+handful of keys that reproduce it closely, so you start from what's already there. Then drag a key left or
+right to change when it happens and up or down to change the value. Double-click the curve to add a key,
+or press <b>Add key</b> to add one at the current frame. <b>Del</b> deletes the selected key, and the arrow
+keys nudge it by one frame or one step. If you'd rather type, the selected key's frame and value are under
+<i>Selected key</i>. Hold Shift while dragging for fine steps.</p>
+<h2>Curve types</h2>
+<p>Each key has a curve that describes how the value travels to the next key. <b>Linear</b> moves at a
+steady speed. <b>Ease In</b> starts slowly and speeds up, <b>Ease Out</b> slows down as it arrives, and
+<b>Ease In/Out</b> is gentle at both ends. <b>Bézier</b> lets you shape the timing yourself with two orange
+handles; pull a handle above the top or below the bottom and the motion overshoots. <b>Smooth (spline)</b>
+draws a smooth path through the key and its neighbours, and <b>Hold</b> stays put until the next key and
+then jumps. Change it with the <i>Curve to next</i> box, or right-click a key.</p>
+<p>Before the first key the part stays at the first key's value, and after the last key it stays at the
+last one. If a channel ends somewhere other than where it started, the panel warns you that the part will
+jump when the animation starts over.</p>
+<h2>Length</h2>
+<p><b>Animation length</b> changes how long one loop takes, in frames. Everything is stretched or squeezed
+to fit, keys included, so fewer frames make the whole stage faster and more frames make it slower.
+<b>Original</b> puts the stage's own length back.</p>
+<p><b>Original motion</b> removes a channel's keys. The panel also shows how big the animation has become;
+if it grows bigger than anything that has been tried in the game, it says so.</p>
+<p>Only the stage's own moving parts can be animated. Platforms you add are part of the fixed stage, and a
+new stage made with Create New Stage has no moving parts.</p>

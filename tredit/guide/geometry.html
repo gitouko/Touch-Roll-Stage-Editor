@@ -1,0 +1,37 @@
+<h1>Platforms and collision</h1>
+<p>The Geometry menu adds simple shapes to a stage. Pick one, then drag a rectangle on the top view to set
+its size.</p>
+<p><b>Add platform</b> (P) makes a box that's drawn and solid, which is what you'll want most of the time.
+Give it a thickness of 0 and it becomes a flat panel. <b>Add invisible floor</b> (I) makes something solid
+that isn't drawn, which is handy for safety nets or for hidden shortcuts. <b>Add decoration</b> is the
+opposite: it's drawn, but the ball goes straight through it. <b>Remove collision in an area</b> (R) makes
+the ball fall through whatever the stage has there, while the drawing stays as it is. Tick <i>Only within a
+height range</i> to limit it to one floor of a stage with several levels.</p>
+<p>New platforms are drawn with one of the stage's own textures, so they fit in with the rest of the stage.
+They always belong to the fixed part of the stage.</p>
+<h2>Changing a shape</h2>
+<p>Drag a shape on the top view to move it, or on the side view to change its height. On the right you can
+type its exact extent (X from / to, Z from / to), the height of its top and its thickness, and choose
+whether it's drawn, solid or both.</p>
+<p><b>Size</b> does the same job in one row: X is the width, Y the thickness and Z the depth. Changing them
+keeps the platform centred where it is, and its top stays at the same height. Tick <b>Keep proportions</b>
+to scale all three together.</p>
+<h2>Textures</h2>
+<p>The <b>Texture</b> list shows the textures the stage itself uses, with a small picture of each, and the
+stage's main floor texture first. Pick one to draw the platform with it. Every stage has two to five of
+them: floor grids, edge colours and so on. Textures only used by moving parts can't be offered, because
+anything drawn with them would move too. Platforms lay their texture on from above, so an edge texture shows
+as stripes on a platform's top; that's expected. Your own pictures as textures are planned for version
+1.1.</p>
+<h2>Turned platforms</h2>
+<p>A platform can be turned on all three axes: <b>Tilt</b>, <b>Swivel</b> and <b>Rotate</b>. With them you can
+build ramps, diagonal paths and banked curves. Tilt leans it about its own x axis, Swivel turns it on the
+spot like a door, and Rotate rolls it about its own z axis (Rotate makes a ramp that rises along x). Q and E
+swivel the selected platform 15° at a time. A platform turns about its own middle, and the ball rolls up and
+down turned platforms just as it does on the game's own slopes.</p>
+<h2>Things to keep in mind</h2>
+<p>You can build past the edge of the original stage: the editor grows the stage's collision area to fit.
+How far out a platform can be drawn depends on the stage. If you go too far, the editor says so and points
+you to <i>Stage &gt; Drawing range</i>.</p>
+<p>Shapes are applied in the order you added them, so a no-collision area only removes collision that was
+there before it, not platforms you add later.</p>

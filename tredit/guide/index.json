@@ -1,0 +1,17 @@
+[
+ ["welcome.html", "Welcome"],
+ ["getting_started.html", "Getting started"],
+ ["map.html", "The map"],
+ ["objects.html", "Objects"],
+ ["geometry.html", "Platforms and collision"],
+ ["view3d.html", "The 3D view"],
+ ["keyframes.html", "Moving parts and keyframes"],
+ ["new_stage.html", "Making a new stage"],
+ ["obj_import.html", "Importing 3D models"],
+ ["drawing_range.html", "Drawing range"],
+ ["names.html", "World and stage names"],
+ ["saving.html", "Saving and sharing"],
+ ["settings.html", "Settings"],
+ ["shortcuts.html", "Keyboard shortcuts"],
+ ["troubleshooting.html", "When something goes wrong"]
+]

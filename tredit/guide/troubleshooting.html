@@ -1,0 +1,22 @@
+<h1>When something goes wrong</h1>
+<p><b>The editor won't save.</b> It tells you why. Usually something is outside the area the game can
+handle, such as an object off the edge of the stage or a platform too far out to be drawn. Move it back, or
+widen the drawing range under <i>Stage &gt; Drawing range</i>.</p>
+<p><b>The 3D view is empty.</b> It needs PyOpenGL and numpy. Click <b>Install PyOpenGL and numpy…</b> in the
+3D view (or use <b>Help &gt; Packages…</b>), then restart the editor. You can also let run_editor.bat
+install them, or run <code>py -3 -m pip install --user PyOpenGL numpy</code> yourself. The packaged program
+already has them.</p>
+<p><b>Which packages do I have?</b> <b>Help &gt; Packages…</b> lists the Python packages the editor uses,
+with the version you have, and installs any that are missing.</p>
+<p><b>I lost my edits.</b> If backups are on (<b>Edit &gt; Settings… &gt; Saving and testing</b>), the editor
+writes a plan of your edits every few minutes. Click <b>Open the backup folder</b> there, then open your ROM
+and bring the newest one back with <b>File &gt; Import edits</b>.</p>
+<p><b>The ball falls through something I built.</b> Check that it's marked Solid, and press C to see its
+collision. For imported models, see the page on importing: the faces may be pointing the wrong way.</p>
+<p><b>Something I built isn't visible in the game.</b> Check that it's marked Drawn, and that it's facing up
+(for models). Very large stages can also run out of drawing room; see <i>Drawing range</i>.</p>
+<p><b>A stage freezes in the game.</b> Undo your last few changes and try again, one at a time. Keep the
+number of triangles and the size of animations within what the editor recommends. If you find a change that
+reliably freezes the game, it's worth reporting with the saved <code>.patch.json</code>.</p>
+<p><b>The editor itself crashes.</b> A window shows what went wrong, and the details are saved in a file
+called error.log. Your ROM is never changed, and your last save is safe.</p>

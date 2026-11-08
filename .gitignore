@@ -1,0 +1,13 @@
+# Game files never go into this repository
+*.nds
+*.sav
+*.dsv
+trcore_ram_*
+# The editor icon is made from the game's own menu icon (from your ROM); keep it to yourself
+tredit/icon.png
+tredit/icon.ico
+# Python and build output
+__pycache__/
+*.pyc
+build/
+dist/

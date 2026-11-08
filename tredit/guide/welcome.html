@@ -1,0 +1,19 @@
+<h1>Welcome</h1>
+<p>This is a stage editor for Super Monkey Ball: Touch &amp; Roll on the Nintendo DS (the USA version). You
+open your own copy of the game, change the stages, and save the result as a new ROM that you can play in an
+emulator or on hardware.</p>
+<p>At heart it's an object placement tool. You move the start, goals, bumpers and bananas around, add new
+ones, and take away the ones you don't want. On top of that there are a few stage tools that come in handy:
+simple platforms and invisible floors, removing collision, a 3D view, the stages' moving parts and their
+timing, brand new empty stages, and the names shown on the world select.</p>
+<p>It isn't 3D modelling software and doesn't try to be. If you want detailed shapes, build them in a real
+3D program (Blender and Wings3D are both free) and bring them in as an .obj file. The guide page <i>Importing 3D models</i>
+explains how.</p>
+<h2>Your ROM is safe</h2>
+<p>The editor never writes to the ROM you open. Every time you save, it writes a separate copy and, next to
+it, a small <code>.patch.json</code> file that lists exactly what changed. Before a copy is written, every
+change is checked against the original bytes, and after it's written the copy is read back and compared
+with what you see in the editor. If anything doesn't match, nothing is saved and you're told why.</p>
+<h2>Finding your way around this guide</h2>
+<p>Pick a page on the left, or type a word in the search box above the list. <i>Getting started</i> is the
+place to begin if you've never used the editor. <i>Keyboard shortcuts</i> has every key on one page.</p>
