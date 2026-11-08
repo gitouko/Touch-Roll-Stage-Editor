@@ -100,8 +100,7 @@ of its own for that reason.
 
 ## How it was made
 
-`trcore/` is the file-format core shared with the research project behind the editor,
-[Touch & Roll Research](https://github.com/gitouko/Touch-Roll-Research). The format notes and in-game tests
+The format notes and in-game tests
 that `trcore/README.md` mentions are there.
 
 ## Licence
