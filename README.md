@@ -96,9 +96,8 @@ of its own for that reason.
 
 ## How it was made
 
-The editor's code, guide and documentation were written by Claude, an AI model made by Anthropic, under
+The editor' was genuinely vibecoded with Claude, under
 the direction of the project's owner, who set the requirements and play-tested every change to the game.
-See [AI_DISCLOSURE.md](AI_DISCLOSURE.md).
 
 `trcore/` is the file-format core shared with the research project behind the editor,
 [Touch & Roll Research](https://github.com/gitouko/Touch-Roll-Research). The format notes and in-game tests
